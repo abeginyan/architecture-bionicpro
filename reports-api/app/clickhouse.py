@@ -19,8 +19,8 @@ SELECT user_email, customer_id, name, region, prosthesis_id, model, report_date,
        errors_count, avg_battery_pct, movements_count, first_event_ts, last_event_ts
 FROM marts.user_prosthesis_report FINAL
 WHERE user_email = {email:String}
-  AND (({dfrom:String} = '') OR report_date >= toDate({dfrom:String}))
-  AND (({dto:String} = '') OR report_date <= toDate({dto:String}))
+  AND (({dfrom:String} = '') OR report_date >= toDateOrNull({dfrom:String}))
+  AND (({dto:String} = '') OR report_date <= toDateOrNull({dto:String}))
 ORDER BY prosthesis_id, report_date
 """
 
