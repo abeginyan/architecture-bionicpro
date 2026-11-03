@@ -2,3 +2,10 @@
 2024__yandex-architecture-sso.code-workspace
 .vs/
 /.vs
+
+# Local env and Python artifacts
+.env
+__pycache__/
+*.pyc
+.venv*/
+reports-api/.venv_test/

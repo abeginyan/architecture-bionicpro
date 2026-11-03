@@ -1,0 +1,5 @@
+# Extra Python deps baked into the Airflow image (Task 2 ETL).
+clickhouse-connect==0.7.19
+psycopg2-binary==2.9.9
+pandas==2.1.4
+pyarrow==15.0.2
