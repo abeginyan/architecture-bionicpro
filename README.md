@@ -100,8 +100,7 @@ Network у запроса `.../openid-connect/auth` в query будут `code_ch
 
 ![C4 архитектура сервиса отчётов BionicPRO](Task2/bionicpro-reports-c4.png)
 
-Диаграмма (C4, container-level): [`Task2/bionicpro-reports-c4.png`](Task2/bionicpro-reports-c4.png),
-редактируемый исходник — [`docs/bionicpro-reports-c4.drawio`](docs/bionicpro-reports-c4.drawio).
+Диаграмма (C4, container-level): [`Task2/bionicpro-reports-c4.png`](Task2/bionicpro-reports-c4.png).
 
 ```
 CRM DB ─┐
