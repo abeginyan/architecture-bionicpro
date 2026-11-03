@@ -1,0 +1,10 @@
+# Keep LF in files executed inside Linux containers so a Windows checkout
+# (autocrlf=true) cannot inject CRLF — the compose inline bash block, shell
+# scripts, SQL seeds and Python are all read by the containers as-is.
+*.sh            text eol=lf
+*.sql           text eol=lf
+*.py            text eol=lf
+*.yaml          text eol=lf
+*.yml           text eol=lf
+Dockerfile      text eol=lf
+*.env.example   text eol=lf
