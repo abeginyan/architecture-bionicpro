@@ -55,7 +55,7 @@ def _pg_connect(prefix: str):
 default_args = {
     "owner": "bionicpro",
     "retries": 2,
-    "retry_delay": timedelta(minutes=5),
+    "retry_delay": timedelta(minutes=2),
 }
 
 
@@ -75,7 +75,12 @@ def bionicpro_reports_etl():
     def create_schema() -> None:
         """Create ClickHouse databases and tables (idempotent CREATE IF NOT EXISTS)."""
         ddl = DDL_PATH.read_text(encoding="utf-8")
-        statements = [s.strip() for s in ddl.split(";") if s.strip()]
+        # Drop SQL line comments so splitting on ';' never yields a comment-only
+        # (ClickHouse "Empty query") fragment.
+        sql = "\n".join(
+            line for line in ddl.splitlines() if not line.strip().startswith("--")
+        )
+        statements = [s.strip() for s in sql.split(";") if s.strip()]
         client = _clickhouse_client()
         for stmt in statements:
             client.command(stmt)
