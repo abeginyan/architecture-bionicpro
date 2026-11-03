@@ -10,3 +10,12 @@
 > TODO (необязательно): добавить исходник в редактируемом формате
 > `bionicpro-auth-c4.drawio` рядом с PNG — для последующего редактирования
 > диаграммы. Сам PNG уже отражает актуальную целевую архитектуру.
+
+## C4-диаграмма сервиса отчётов (задача 2)
+
+- Рендер (PNG): [`../Task2/bionicpro-reports-c4.png`](../Task2/bionicpro-reports-c4.png)
+- Редактируемый исходник (draw.io): [`bionicpro-reports-c4.drawio`](bionicpro-reports-c4.drawio)
+
+> PNG экспортирован вручную в draw.io. В окружении не было CLI draw.io, поэтому
+> автоэкспорт из `.drawio` в PNG не выполнялся — при необходимости откройте
+> `.drawio` в app.diagrams.net и экспортируйте заново.
