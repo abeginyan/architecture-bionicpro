@@ -72,6 +72,10 @@ Network у запроса `.../openid-connect/auth` в query будут `code_ch
 
 ### Целевая архитектура (куда это развивается)
 
+Диаграмма (C4, container-level): [`Task1/bionicpro-auth-c4.png`](Task1/bionicpro-auth-c4.png).
+
+![Целевая архитектура авторизации BionicPRO](Task1/bionicpro-auth-c4.png)
+
 - **Keycloak как identity broker, по одному на страну** — локальное хранение
   персональных данных и соответствие требованиям резидентства.
 - **User federation к локальному LDAP/AD** — пользователи остаются в
